@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="obsidian">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjun Pillai — Software Developer & Full Stack Engineer</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Portfolio of Arjun Pillai — Software Developer and Full Stack Engineer. Specializing in high-performance web systems, REST APIs, and scalable backends.">
+  <meta name="author" content="Arjun Pillai">
+  <meta name="keywords" content="Arjun Pillai, Software Developer, Full Stack Engineer, Web Developer, ECE, Bharati Vidyapeeth, React, Node.js, Python, PostgreSQL, Portfolio">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://00aj-bit.github.io/Portfolio/">
+  <meta property="og:title" content="Arjun Pillai — Software Developer & Full Stack Engineer">
+  <meta property="og:description" content="Portfolio of Arjun Pillai — Software Developer and Full Stack Engineer.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/316678852?v=4">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Arjun Pillai — Software Developer Portfolio">
+  <meta property="twitter:description" content="Building resilient backends, performant web applications, and intuitive digital experiences.">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0a0c10">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2338bdf8'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Background Glow -->
+  <div class="bg-ambient-glow"></div>
+
+  <!-- =========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" id="nav-brand-logo">
+        <div class="nav-brand-icon">AP</div>
+        <span>Arjun Pillai</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="desktop-nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#terminal" class="nav-link">Terminal</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Command Palette Trigger -->
+        <button class="cmd-trigger-btn" id="cmd-palette-trigger" title="Command Palette (Ctrl + K)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <kbd>Ctrl+K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="icon-btn" id="theme-toggle-btn" title="Toggle Color Theme" aria-label="Toggle Color Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- View Resume CTA -->
+        <button class="btn-primary" id="nav-resume-btn" style="padding: 0.5rem 1.1rem; font-size: 0.88rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          CV / Resume
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION
+         ========================================================================= -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <!-- Availability Badge -->
+            <div class="status-badge" id="hero-status-badge">
+              <span class="status-dot"></span> Open to Full-Time & Freelance Roles
+            </div>
+
+            <div class="hero-greeting">// Hello, World! I am</div>
+            <h1 class="hero-name" id="hero-name">Arjun Pillai</h1>
+            
+            <div class="hero-role-wrapper">
+              <span>I build as a</span>
+              <span class="hero-typed-text" id="hero-typed-role">Software Developer</span>
+            </div>
+
+            <p class="hero-description" id="hero-desc">
+              Building resilient backends, performant web applications, and intuitive digital experiences.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <span>Explore Featured Work</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <button class="btn-secondary" id="view-resume-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download CV
+              </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-social-links" id="hero-social-links">
+              <!-- Dynamically hydrated from data.js -->
+            </div>
+          </div>
+
+          <!-- Hero Visual: Developer Config Inspector Card -->
+          <div class="hero-visual">
+            <div class="hero-code-card">
+              <div class="code-card-header">
+                <div class="code-window-dots">
+                  <span class="code-dot dot-red"></span>
+                  <span class="code-dot dot-yellow"></span>
+                  <span class="code-dot dot-green"></span>
+                </div>
+                <div class="code-card-title">developer_profile.json</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">UTF-8</div>
+              </div>
+              <div class="code-card-body">
+                <div><span class="syntax-keyword">const</span> <span class="syntax-const">engineer</span> = {</div>
+                <div style="padding-left: 1.25rem;"><span class="syntax-prop">name:</span> <span class="syntax-string">"Arjun Pillai"</span>,</div>
+                <div style="padding-left: 1.25rem;"><span class="syntax-prop">education:</span> <span class="syntax-string">"B.Tech in ECE (BVDU Pune)"</span>,</div>
+                <div style="padding-left: 1.25rem;"><span class="syntax-prop">specialization:</span> [<span class="syntax-string">"Full-Stack"</span>, <span class="syntax-string">"REST APIs"</span>, <span class="syntax-string">"Systems"</span>],</div>
+                <div style="padding-left: 1.25rem;"><span class="syntax-prop">coreStack:</span> [<span class="syntax-string">"React"</span>, <span class="syntax-string">"Node.js"</span>, <span class="syntax-string">"Python"</span>, <span class="syntax-string">"PostgreSQL"</span>],</div>
+                <div style="padding-left: 1.25rem;"><span class="syntax-prop">status:</span> <span class="syntax-string">"Ready to deploy & build high-impact software"</span>,</div>
+                <div style="padding-left: 1.25rem;"><span class="syntax-func">hire:</span> () =&gt; <span class="syntax-keyword">true</span></div>
+                <div>};</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Counter Bar -->
+        <div class="stats-bar-grid" id="stats-grid">
+          <!-- Dynamically hydrated from data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ABOUT & EDUCATION SECTION
+         ========================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-tag">01 / Background</div>
+          <h2 class="section-title">About Me & Education</h2>
+          <p class="section-subtitle">Bridging electronic hardware fundamentals with modern, scalable software engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio & Highlights -->
+          <div class="about-text-column">
+            <h3 class="about-text-lead" id="about-lead"></h3>
+            <div class="about-text" id="about-paragraphs"></div>
+
+            <div class="about-highlights-grid" id="about-highlights">
+              <!-- Dynamically hydrated -->
+            </div>
+          </div>
+
+          <!-- Academic Journey Timeline -->
+          <div class="education-column">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <h3 style="font-size: 1.35rem; font-weight: 700;">Academic Milestone Journey</h3>
+            </div>
+            
+            <div class="education-wrapper" id="education-timeline">
+              <!-- Dynamically hydrated from data.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TECHNICAL SKILLS MATRIX SECTION
+         ========================================================================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-tag">02 / Proficiency</div>
+          <h2 class="section-title">Technical Skillset & Tooling</h2>
+          <p class="section-subtitle">A well-rounded toolkit spanning frontend interfaces, scalable backends, and low-level system design.</p>
+        </div>
+
+        <div class="skills-categories-grid" id="skills-container">
+          <!-- Dynamically hydrated from data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FEATURED PROJECTS SECTION
+         ========================================================================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-tag">03 / Portfolio Showcase</div>
+          <h2 class="section-title">Engineered Projects & Case Studies</h2>
+          <p class="section-subtitle">A collection of production-ready web apps, IoT sentinels, and system telemetry platforms.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="Systems">Systems & IoT</button>
+          <button class="filter-btn" data-filter="Full-Stack">Full-Stack</button>
+          <button class="filter-btn" data-filter="AI">AI & Web</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Dynamically hydrated from data.js -->
+        </div>
+
+        <!-- Live GitHub Repositories Explorer -->
+        <div class="github-live-wrapper">
+          <div class="github-header-row">
+            <div class="github-title-group">
+              <img src="https://avatars.githubusercontent.com/u/316678852?v=4" alt="00AJ-bit GitHub" class="github-avatar" id="github-user-avatar">
+              <div>
+                <h3 style="font-size: 1.25rem; font-weight: 700;">Live GitHub Repositories (00AJ-bit)</h3>
+                <div style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);" id="github-user-stats">
+                  Fetching live metrics from api.github.com...
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/00AJ-bit" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+              View GitHub Profile ↗
+            </a>
+          </div>
+
+          <div class="github-repos-grid" id="github-repos-grid">
+            <!-- Dynamically populated via GitHub API -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         INTERACTIVE DEVELOPER CLI TERMINAL SECTION
+         ========================================================================= -->
+    <section class="section" id="terminal">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-tag">04 / Interactive Console</div>
+          <h2 class="section-title">Developer Mini-Terminal</h2>
+          <p class="section-subtitle">Run live CLI commands to inspect my background, skills, and projects in an interactive shell.</p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="code-window-dots">
+              <span class="code-dot dot-red"></span>
+              <span class="code-dot dot-yellow"></span>
+              <span class="code-dot dot-green"></span>
+            </div>
+            <div class="terminal-tabs">
+              <span>bash — arjun@dev: ~</span>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">node v20.x</div>
+          </div>
+
+          <div class="terminal-body">
+            <div class="terminal-output" id="terminal-output"></div>
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">arjun@dev:~$</span>
+              <input type="text" class="terminal-input" id="terminal-input" placeholder="type 'help' or 'skills'..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CONTACT & CONNECT HUB SECTION
+         ========================================================================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-tag">05 / Get In Touch</div>
+          <h2 class="section-title">Let's Build Something Together</h2>
+          <p class="section-subtitle">Have a project, role, or collaboration in mind? Feel free to reach out directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Card -->
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">Direct Connect</h3>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Direct Email</div>
+                <a href="mailto:arjun004pillai@gmail.com" class="contact-method-value">arjun004pillai@gmail.com</a><br>
+                <button class="copy-email-btn" id="copy-email-btn">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy to Clipboard
+                </button>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div>
+                <div class="contact-method-label">LinkedIn Profile</div>
+                <a href="https://www.linkedin.com/in/arjun-pillai-a88998425" target="_blank" rel="noopener noreferrer" class="contact-method-value" style="color: var(--accent-primary);">
+                  linkedin.com/in/arjun-pillai-a88998425 ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Location</div>
+                <div class="contact-method-value">Pune, Maharashtra, India</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Composer Form -->
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">Send a Direct Message</h3>
+            <form id="portfolio-contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Smith" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="Collaboration / Job Opportunity">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; padding: 0.85rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-copy">
+        © <span id="current-year">2026</span> <strong>Arjun Pillai</strong>. Built with clean architecture & modern web standards.
+      </div>
+      <div style="display: flex; gap: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        <a href="#hero" style="color: var(--accent-primary);">↑ Back to Top</a>
+        <a href="https://github.com/00AJ-bit/Portfolio" target="_blank" rel="noopener noreferrer">Source Repository</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS: CASE STUDY, RESUME CV, COMMAND PALETTE
+       ========================================================================= -->
+
+  <!-- 1. Case Study Deep Dive Modal -->
+  <div class="modal-backdrop" id="case-study-modal" role="dialog" aria-modal="true">
+    <div class="modal-container" id="case-study-content">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- 2. Curriculum Vitae (CV) / Resume Modal -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true">
+    <div class="modal-container" id="resume-content" style="max-width: 900px;">
+      <!-- Injected via resume.js -->
+    </div>
+  </div>
+
+  <!-- 3. Global Command Palette Modal (Ctrl + K) -->
+  <div class="modal-backdrop" id="command-palette-modal" role="dialog" aria-modal="true">
+    <div class="cmd-palette-container">
+      <input type="text" class="cmd-search-input" id="cmd-palette-input" placeholder="Type a command, project, or section...">
+      <div class="cmd-results-list" id="cmd-palette-results">
+        <!-- Injected via command-palette.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/command-palette.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/resume.js"></script>
+
+</body>
+</html>
