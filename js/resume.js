@@ -1,6 +1,7 @@
 /**
  * Arjun Pillai — Resume / CV Generator & Modal Controller
- * Provides an ATS-friendly, clean professional CV viewer with one-click print/PDF download.
+ * Renders an exact ATS-standard 1-page Developer Resume matching professional hiring formats.
+ * Perfectly aligned for on-screen viewing and single-page PDF/print export.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,16 +22,12 @@ window.openResumeModal = function() {
   if (!modal || !content) return;
 
   const profile = PORTFOLIO_DATA.profile;
-  const education = PORTFOLIO_DATA.education;
-  const skills = PORTFOLIO_DATA.skills;
-  const projects = PORTFOLIO_DATA.projects;
-  const experience = PORTFOLIO_DATA.experience;
 
   content.innerHTML = `
-    <div class="modal-header">
+    <div class="modal-header print-hide">
       <div>
-        <h2 class="modal-title" style="font-size: 1.25rem;">Curriculum Vitae (CV) Preview</h2>
-        <span style="font-size: 0.85rem; color: var(--text-muted);">ATS-Formatted • Ready for Print / PDF Export</span>
+        <h2 class="modal-title" style="font-size: 1.2rem; font-weight: 700;">Curriculum Vitae (CV) — 1-Page ATS Format</h2>
+        <span style="font-size: 0.82rem; color: var(--text-muted);">Strict 1-page layout • Optimized for ATS & PDF export</span>
       </div>
       <div style="display: flex; gap: 0.75rem; align-items: center;">
         <button class="btn-primary" onclick="printResume()" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
@@ -41,82 +38,112 @@ window.openResumeModal = function() {
       </div>
     </div>
 
-    <div class="modal-body" style="background: #f8fafc; padding: 2rem;">
-      <div class="resume-sheet">
+    <div class="modal-body resume-modal-body">
+      <!-- 1-Page ATS Standard Resume Sheet -->
+      <div class="cv-page" id="cv-printable-page">
+        
         <!-- Header -->
-        <div class="resume-header">
-          <h1 class="resume-name">${profile.name}</h1>
-          <div class="resume-title">${profile.title}</div>
-          <div class="resume-contact-bar">
-            <span>📧 ${profile.email}</span>
-            <span>📍 ${profile.location}</span>
-            <span>💼 <a href="${profile.social.linkedin}" target="_blank" style="color: #0284c7; text-decoration: underline;">linkedin.com/in/arjun-pillai-a88998425</a></span>
-            <span>🐙 <a href="${profile.social.github}" target="_blank" style="color: #0284c7; text-decoration: underline;">github.com/00AJ-bit</a></span>
+        <header class="cv-header">
+          <h1 class="cv-name">ARJUN PILLAI</h1>
+          <div class="cv-roles">Software Developer | Full Stack Engineer | Backend Developer</div>
+          <div class="cv-contacts">
+            <a href="mailto:${profile.email}" class="cv-link">✉ ${profile.email}</a>
+            <span class="cv-sep">|</span>
+            <a href="${profile.social.linkedin}" target="_blank" rel="noopener noreferrer" class="cv-link">🔗 LinkedIn</a>
+            <span class="cv-sep">|</span>
+            <a href="${profile.social.github}" target="_blank" rel="noopener noreferrer" class="cv-link">💻 GitHub</a>
+            <span class="cv-sep">|</span>
+            <span>📍 Pune, Maharashtra</span>
           </div>
-        </div>
+        </header>
 
-        <!-- Summary -->
-        <h2 class="resume-section-title">Professional Summary</h2>
-        <p style="font-size: 0.92rem; color: #334155; margin-bottom: 1.25rem;">
-          Software Developer with a strong engineering background in Electronics & Communication Engineering (ECE) from Bharati Vidyapeeth (DU) College of Engineering, Pune. Skilled in full-stack web engineering, architecting high-throughput REST APIs, database design (SQL/NoSQL), and bridging low-level system understanding with modern cloud technologies. Passionate about writing clean, maintainable, and high-performance code.
-        </p>
+        <!-- Professional Summary -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Professional Summary</h2>
+          <p class="cv-summary-text">
+            Software Developer with strong foundational knowledge in Electronics & Communication Engineering (ECE) from Bharati Vidyapeeth College of Engineering, Pune. Experienced in full-stack web development, building high-throughput REST APIs, database architecture, and distributed systems. Seeking opportunities to contribute to high-impact software engineering projects.
+          </p>
+        </section>
 
-        <!-- Technical Skills -->
-        <h2 class="resume-section-title">Technical Skills</h2>
-        <div style="font-size: 0.9rem; color: #334155; line-height: 1.6; margin-bottom: 1.25rem;">
-          <div><strong>Languages:</strong> JavaScript (ES6+), TypeScript, Python, C, C++, SQL, HTML5, CSS3</div>
-          <div><strong>Frameworks & Web:</strong> React.js, Node.js, Express, Next.js, FastAPI, RESTful API Architecture, TailwindCSS</div>
-          <div><strong>Databases & Storage:</strong> PostgreSQL, MongoDB, MySQL, Redis (In-Memory Caching)</div>
-          <div><strong>Tools & Cloud:</strong> Git, GitHub Actions, Docker, Linux/Unix, Postman, Vercel, Netlify, CI/CD Pipelines</div>
-        </div>
-
-        <!-- Featured Projects -->
-        <h2 class="resume-section-title">Key Engineering Projects</h2>
-        ${projects.map(p => `
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <span>${p.title}</span>
-              <span style="font-weight: 500; font-size: 0.85rem; color: #64748b;">${p.category}</span>
-            </div>
-            <div class="resume-item-sub">
-              <strong>Tech Stack:</strong> ${p.tags.join(', ')} | 
-              <a href="${p.githubUrl}" target="_blank" style="color: #0284c7; text-decoration: underline;">GitHub Repository</a>
-            </div>
-            <ul class="resume-bullet-list">
-              <li>${p.caseStudy.solution}</li>
-              <li>${p.caseStudy.highlights[0]}</li>
-              <li>${p.caseStudy.highlights[1]}</li>
-            </ul>
-          </div>
-        `).join('')}
-
-        <!-- Experience -->
-        <h2 class="resume-section-title">Experience & Capstone Leadership</h2>
-        ${experience.map(exp => `
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <span>${exp.role}</span>
-              <span style="font-weight: 500; font-size: 0.85rem; color: #64748b;">${exp.duration}</span>
-            </div>
-            <div class="resume-item-sub">${exp.company} • ${exp.location}</div>
-            <ul class="resume-bullet-list">
-              ${exp.contributions.map(c => `<li>${c}</li>`).join('')}
-            </ul>
-          </div>
-        `).join('')}
+        <!-- Core Skills -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Core Skills</h2>
+          <ul class="cv-list">
+            <li><strong>Programming:</strong> JavaScript (ES6+), TypeScript, Python, C/C++, SQL, HTML, CSS</li>
+            <li><strong>Frameworks & Web:</strong> React.js, Node.js, Express, Next.js, FastAPI, RESTful APIs</li>
+            <li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Redis (In-Memory Caching)</li>
+            <li><strong>Tools & DevOps:</strong> Git, GitHub, Docker, Linux, Postman, VS Code, CI/CD Pipelines</li>
+          </ul>
+        </section>
 
         <!-- Education -->
-        <h2 class="resume-section-title">Education</h2>
-        ${education.map(edu => `
-          <div class="resume-item">
-            <div class="resume-item-header">
-              <span>${edu.degree}</span>
-              <span style="font-weight: 500; font-size: 0.85rem; color: #64748b;">${edu.duration}</span>
-            </div>
-            <div class="resume-item-sub">${edu.institution}, ${edu.location} — <strong>${edu.grade}</strong></div>
-            <p style="font-size: 0.88rem; color: #475569; margin-top: 0.2rem;">${edu.description}</p>
+        <section class="cv-section">
+          <h2 class="cv-section-title">Education</h2>
+          <ul class="cv-list">
+            <li>
+              <strong>B.Tech in Electronics & Communication Engineering</strong>, Bharati Vidyapeeth College of Engineering, Pune (2021–2025)
+            </li>
+            <li>
+              <strong>Saint Francis School</strong> | 12th Grade | 10th Grade
+            </li>
+          </ul>
+        </section>
+
+        <!-- Experience -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Experience</h2>
+          <div class="cv-item-title-bar">
+            <strong>Software Developer & Project Lead</strong> | Engineering Capstone & Systems | <span>Ongoing</span>
           </div>
-        `).join('')}
+          <ul class="cv-list">
+            <li>Developing full-stack web applications and low-latency RESTful APIs using React, Node.js, and Python.</li>
+            <li>Building distributed telemetry, database schemas (SQL/NoSQL), and real-time WebSocket communication.</li>
+            <li>Implementing automated CI/CD pipelines, Docker containerization, and cloud deployment.</li>
+          </ul>
+        </section>
+
+        <!-- Projects -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Projects</h2>
+          
+          <div class="cv-project-block">
+            <div class="cv-project-name">God's Eye: Real-Time Edge Video Analytics & Surveillance Sentinel</div>
+            <ul class="cv-list">
+              <li>AI-powered edge vision and video telemetry platform for real-time anomaly detection and low-latency alert distribution.</li>
+            </ul>
+          </div>
+
+          <div class="cv-project-block">
+            <div class="cv-project-name">OmniPulse: Distributed System Monitoring & Metric Ingestion Engine</div>
+            <ul class="cv-list">
+              <li>Full-stack observability engine with time-series ingestion, Redis caching, and live interactive health dashboards.</li>
+            </ul>
+          </div>
+
+          <div class="cv-project-block">
+            <div class="cv-project-name">IntelliDoc AI: Intelligent Document Parsing & Semantic Search Engine</div>
+            <ul class="cv-list">
+              <li>Document analysis and semantic retrieval system powered by vector embeddings and conversational citation grounding.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Certifications</h2>
+          <ul class="cv-list">
+            <li>Full Stack Web Development & Software System Architecture</li>
+            <li>Database Management Systems (DBMS & SQL Mastery)</li>
+            <li>IoT, Microcontrollers & Embedded Systems Integration</li>
+          </ul>
+        </section>
+
+        <!-- Languages -->
+        <section class="cv-section" style="margin-bottom: 0;">
+          <h2 class="cv-section-title">Languages</h2>
+          <p class="cv-lang-text">English • Hindi</p>
+        </section>
+
       </div>
     </div>
   `;
