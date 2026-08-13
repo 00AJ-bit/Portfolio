@@ -81,10 +81,10 @@ window.openResumeModal = function() {
           <h2 class="cv-section-title">Education</h2>
           <ul class="cv-list">
             <li>
-              <strong>B.Tech in Electronics & Communication Engineering</strong>, Bharati Vidyapeeth College of Engineering, Pune (2021–2025)
+              <strong>B.Tech in Electronics & Communication Engineering</strong>, Bharati Vidyapeeth College of Engineering, Pune (2023–2027 | Ongoing)
             </li>
             <li>
-              <strong>Saint Francis School</strong> | 12th Grade | 10th Grade
+              <strong>Saint Francis School</strong> | 12th: 2023 | 10th: 2021
             </li>
           </ul>
         </section>

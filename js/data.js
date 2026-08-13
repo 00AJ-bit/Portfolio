@@ -59,35 +59,35 @@ const PORTFOLIO_DATA = {
     {
       degree: "Bachelor of Technology (B.Tech) in Electronics & Communication Engineering (ECE)",
       institution: "Bharati Vidyapeeth (DU) College of Engineering, Pune",
-      duration: "2021 – 2025",
+      duration: "2023 – 2027 (Ongoing)",
       location: "Pune, India",
-      description: "Comprehensive coursework in Computer Organization, Microprocessors & Microcontrollers, Digital Signal Processing, Data Communications, Operating Systems, and Object-Oriented Programming.",
-      grade: "First Class with Distinction",
+      description: "Core coursework in Computer Organization, Microprocessors, Operating Systems, Data Communications, Signal Processing, and Object-Oriented Programming.",
+      grade: "Ongoing (B.Tech Candidate)",
       achievements: [
-        "Specialized in embedded systems, communication protocols, and software development methodologies.",
-        "Built engineering capstone projects integrating hardware sensors with cloud dashboard backends."
+        "Specializing in embedded systems, software architecture, and distributed web platforms.",
+        "Engineering capstone projects bridging hardware telemetry with cloud analytics."
       ]
     },
     {
       degree: "Higher Secondary Certificate (12th Grade)",
-      institution: "St. Francis School",
-      duration: "Completed",
+      institution: "Saint Francis School",
+      duration: "2023",
       location: "India",
-      description: "Major in Science & Mathematics (Physics, Chemistry, Mathematics, Computer Science).",
+      description: "Science & Mathematics (Physics, Chemistry, Mathematics, Computer Science).",
       grade: "Academic Distinction",
       achievements: [
-        "Developed foundational programming skills and computational problem solving."
+        "Strong foundation in algorithmic thinking, computational problem solving, and science."
       ]
     },
     {
       degree: "Secondary School Certificate (10th Grade)",
-      institution: "St. Francis School",
-      duration: "Completed",
+      institution: "Saint Francis School",
+      duration: "2021",
       location: "India",
       description: "Core curriculum in Mathematics, Science, and Information Technology.",
       grade: "Exemplary Academic Performance",
       achievements: [
-        "Active participant in science exhibitions, technical quiz competitions, and leadership activities."
+        "Active participant in technical exhibitions, quiz competitions, and leadership activities."
       ]
     }
   ],
